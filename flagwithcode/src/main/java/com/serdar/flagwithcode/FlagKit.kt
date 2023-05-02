@@ -5,7 +5,7 @@ import android.graphics.drawable.Drawable
 import androidx.core.content.ContextCompat
 
 
-object FlagKit {
+object FlagResource {
     private val countries = listOf(
         "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AR", "AT", "AU", "AX", "AZ", "BA", "BB",
         "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BM", "BN", "BO", "BR", "BS", "BT", "BW", "BY",
@@ -23,9 +23,10 @@ object FlagKit {
         "UY", "UZ", "VC", "VE", "VG", "VN", "WS", "WW", "YE", "ZA", "ZW"
     )
 
-    fun drawableWithFlag(context: Context, flagName: String?): Drawable? {
+    fun getDrawableWithFlagCode(context: Context, flagCode: String?): Drawable? {
         val res = context.resources
-        val resourceId = res.getIdentifier(flagName, "drawable", context.packageName)
+        val countryCode=flagCode?.lowercase()
+        val resourceId = res.getIdentifier(countryCode, "drawable", context.packageName)
         return ContextCompat.getDrawable(context,resourceId)
     }
 

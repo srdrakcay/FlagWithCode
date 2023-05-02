@@ -11,7 +11,7 @@ import com.serdar.flagwithcode.databinding.ActivityMainBinding
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-      FlagKit.drawableWithFlag(this,"ad").also {
+      FlagResource.getDrawableWithFlagCode(this,"AF").also {
           binding.imageView.setImageDrawable(it)
       }
 
