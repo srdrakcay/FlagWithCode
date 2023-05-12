@@ -11,9 +11,14 @@ import com.serdar.flagwithcode.databinding.ActivityMainBinding
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-      FlagResource.getDrawableWithFlagCode(this,"AF").also {
-          binding.imageView.setImageDrawable(it)
-      }
+        binding.button.setOnClickListener {
+            val countryCode=binding.editTextText.text.toString()
+            FlagResource.getDrawableWithFlagCode(this,countryCode).also {
+                binding.imageView.setImageDrawable(it)
+            }
+
+        }
+
 
     }
 }
