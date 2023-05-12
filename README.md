@@ -16,3 +16,5 @@ How To Use
 Project Screen
 
 ![GIF](https://i.hizliresim.com/f1q5yr4.gif)
+
+# LİCENSE
